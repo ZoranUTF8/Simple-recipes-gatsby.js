@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FiAlignJustify } from "react-icons/fi";
 import mainLogo from "../assets/images/logo.png";
 const Navbar = () => {
+  const [showLinks, setShowLinks] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="nav-center">
@@ -10,25 +12,40 @@ const Navbar = () => {
           <Link to="/">
             <img src={mainLogo} alt="simply recipes" />
           </Link>
-          <button className="nav-btn">
+          <button
+            className="nav-btn"
+            onClick={() => {
+              setShowLinks(!showLinks);
+            }}
+          >
             <FiAlignJustify />
           </button>
         </div>
-        <div className="nav-links show-links">
-          <Link to="/" className="nav-link" activeClassName="active-link">
+
+        <div className={showLinks ? "nav-links show-links" : "nav-links"}>
+          <Link to="/" className="nav-link" activeClassName="active-link" onClick={() => {
+              setShowLinks(false);
+            }}>
             Home
           </Link>
           <Link
             to="/recipes"
             className="nav-link"
             activeClassName="active-link"
+            onClick={() => {
+              setShowLinks(false);
+            }}
           >
             Recipes
           </Link>
-          <Link to="/about" className="nav-link" activeClassName="active-link">
+          <Link to="/about" className="nav-link" activeClassName="active-link" onClick={() => {
+              setShowLinks(false);
+            }}>
             About
           </Link>
-          <Link to="/tags" className="nav-link" activeClassName="active-link">
+          <Link to="/tags" className="nav-link" activeClassName="active-link" onClick={() => {
+              setShowLinks(false);
+            }}>
             Tags
           </Link>
           <div className="nav-link contact-link">

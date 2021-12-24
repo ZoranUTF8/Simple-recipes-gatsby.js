@@ -1,2 +1,9 @@
-1. Use react icons npm install react-icons --save
+1. Use react icons 
+npm install react-icons --save
+import { FiAlignJustify } from "react-icons/fi";
+<FiAlignJustify />
+
+
+
+2. activeClassName="active-link" adds the class when active comes from gatsby
 
