@@ -26,7 +26,7 @@ const Navbar = () => {
           <Link to="/" className="nav-link" activeClassName="active-link" onClick={() => {
               setShowLinks(false);
             }}>
-            Home
+            Početna
           </Link>
           <Link
             to="/recipes"
@@ -36,17 +36,17 @@ const Navbar = () => {
               setShowLinks(false);
             }}
           >
-            Recipes
+            Recepti
           </Link>
           <Link to="/about" className="nav-link" activeClassName="active-link" onClick={() => {
               setShowLinks(false);
             }}>
-            About
+            O nama
           </Link>
           <Link to="/tags" className="nav-link" activeClassName="active-link" onClick={() => {
               setShowLinks(false);
             }}>
-            Tags
+            Oznake
           </Link>
           <div className="nav-link contact-link">
             <Link to="/contact" className="btn">
