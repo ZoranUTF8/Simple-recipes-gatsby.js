@@ -29,11 +29,11 @@ const AllRecipes = () => {
   } = useStaticQuery(query);
 
   return (
-    <div>
+    <section className="recipes-container">
       <h4>ALL RECIPES</h4>
       <RecipesList recipes={recipes} />
       <TagList recipes={recipes} />
-    </div>
+    </section>
   );
 };
 
