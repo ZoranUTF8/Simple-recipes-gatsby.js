@@ -41,7 +41,7 @@ const Navbar = () => {
           <Link to="/about" className="nav-link" activeClassName="active-link" onClick={() => {
               setShowLinks(false);
             }}>
-            O nama
+            Onama
           </Link>
           <Link to="/tags" className="nav-link" activeClassName="active-link" onClick={() => {
               setShowLinks(false);
