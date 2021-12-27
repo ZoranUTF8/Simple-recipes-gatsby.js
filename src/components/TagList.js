@@ -14,7 +14,7 @@ const TagList = ({ recipes }) => {
           const [text, value] = tag;
           const slug = slugify(text, { lower: true });
           return (
-            <Link key={index} to={`/tags/${tag}`}>
+            <Link key={index} to={`/tags/${slug}`}>
               {text} ({value})
             </Link>
           );
