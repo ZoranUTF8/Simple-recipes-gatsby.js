@@ -3,6 +3,7 @@ import RecipesList from "./RecipesList";
 import TagList from "./TagList";
 import { graphql, useStaticQuery } from "gatsby";
 
+
 const query = graphql`
   {
     allContentfulRecipe(sort: { fields: title, order: ASC }) {
@@ -30,9 +31,8 @@ const AllRecipes = () => {
 
   return (
     <section className="recipes-container">
-      <h4>ALL RECIPES</h4>
-      <RecipesList recipes={recipes} />
       <TagList recipes={recipes} />
+      <RecipesList recipes={recipes} />
     </section>
   );
 };
