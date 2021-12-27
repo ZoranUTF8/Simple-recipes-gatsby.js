@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import TagList from "../components/TagList";
 import { graphql, Link } from "gatsby";
 import tagsSetUp from "../utils/tagsSetUp";
+import slugify from "slugify";
 
 const Tags = ({
   data: {
@@ -16,8 +17,10 @@ const Tags = ({
         <section className="tags-page">
           {tags.map((tag, index) => {
             const [text, value] = tag;
+            const slug = slugify(text, { lower: true });
+
             return (
-              <Link key={index} to={`/${text}`} className="tag">
+              <Link key={index} to={`/tags/${slug}`} className="tag">
                 <h5>{text}</h5>
                 <p>{value} recept.</p>
               </Link>
