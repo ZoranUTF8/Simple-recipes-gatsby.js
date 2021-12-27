@@ -657,6 +657,7 @@ form > *:last-child {
 /*#########*/
 
 .tags-page {
+  margin-top: 5%;
   display: grid;
   gap: 2rem;
   padding-bottom: 3rem;
