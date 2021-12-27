@@ -1,7 +1,6 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
-
+});
 
 module.exports = {
   siteMetadata: {
@@ -11,20 +10,21 @@ module.exports = {
     author: "Zoran Janjic",
     person: {
       name: "Zoran",
-      age: 32
+      age: 32,
     },
     simpleData: ["item 1", "item 2"],
-    complexData: [{
+    complexData: [
+      {
         name: "Nikola",
-        age: 42
+        age: 42,
       },
       {
         name: "Stefan",
-        age: 23
+        age: 23,
       },
       {
         name: "Miloje",
-        age: 56
+        age: 56,
       },
     ],
   },
@@ -46,6 +46,23 @@ module.exports = {
       options: {
         spaceId: `qfh4nkfldy55`,
         accessToken: process.env.CONTENTFULL_API_KEY,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Montserrat",
+              variants: ["400"],
+            },
+            {
+              family: "Inconsolata",
+              variants: ["400", "500", "600", "700"],
+            },
+          ],
+        },
       },
     },
   ],
