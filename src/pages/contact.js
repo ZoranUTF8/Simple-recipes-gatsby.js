@@ -31,33 +31,36 @@ const Contact = ({
               woke irony venmo put a bird on it whatever sriracha actually.
               Tousled thundercats skateboard shabby chic raclette.
             </p>
-            </article>
-            <article>
-              <form className="form contact-form">
-                <div className="form-row">
-                  <label htmlFor="name">Vaše ime</label>
-                  <input type="text" name="name" id="name" />
-                </div>
-                <div className="form-row">
-                  <label htmlFor="email">Vaš email</label>
-                  <input type="text" name="email" id="email" />
-                </div>
-                <div className="form-row">
-                  <label htmlFor="message">Vaša poruka:</label>
-                  <textarea name="message" id="message"></textarea>
-                </div>
-                <button className="btn block" type="submit">
-                  Pošalji
-                </button>
-              </form>
-            </article>
+          </article>
+          <article>
+            <form
+              className="form contact-form"
+              action="https://formspree.io/f/mayvnngb"
+              method="POST"
+            >
+              <div className="form-row">
+                <label htmlFor="name">Vaše ime</label>
+                <input type="text" name="name" id="name" />
+              </div>
+              <div className="form-row">
+                <label htmlFor="email">Vaš email</label>
+                <input type="text" name="email" id="email" />
+              </div>
+              <div className="form-row">
+                <label htmlFor="message">Vaša poruka:</label>
+                <textarea name="message" id="message"></textarea>
+              </div>
+              <button className="btn block" type="submit">
+                Pošalji
+              </button>
+            </form>
+          </article>
         </section>
         <section className="featured-recipes">
           <h5>Preporučeni recepti</h5>
-          <RecipesList recipes={recipes}/>
+          <RecipesList recipes={recipes} />
         </section>
       </main>
-      
     </Layout>
   );
 };
