@@ -9,9 +9,6 @@ const RecipeTemplate = (props) => {
   );
 };
 
-export const query = graphql`
-  {
-  }
-`;
+
 
 export default RecipeTemplate;
