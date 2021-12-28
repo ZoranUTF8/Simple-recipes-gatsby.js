@@ -4,6 +4,7 @@ import TagList from "../components/TagList";
 import { graphql, Link } from "gatsby";
 import tagsSetUp from "../utils/tagsSetUp";
 import slugify from "slugify";
+import SEO from "../components/SEO";
 
 const Tags = ({
   data: {
@@ -13,6 +14,7 @@ const Tags = ({
   const tags = tagsSetUp(recipes);
   return (
     <Layout>
+    <SEO title="Oznake" description="Oznake"/>
       <main className="page">
         <section className="tags-page">
           {tags.map((tag, index) => {

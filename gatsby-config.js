@@ -15,25 +15,6 @@ module.exports = {
     title: "Jednostavni Recepti",
     description: "Stranica za recepte",
     author: "Zoran Janjic",
-    person: {
-      name: "Zoran",
-      age: 32,
-    },
-    simpleData: ["item 1", "item 2"],
-    complexData: [
-      {
-        name: "Nikola",
-        age: 42,
-      },
-      {
-        name: "Stefan",
-        age: 23,
-      },
-      {
-        name: "Miloje",
-        age: 56,
-      },
-    ],
   },
 
   plugins: [
@@ -72,5 +53,6 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-react-helmet`
   ],
 };
